@@ -36,7 +36,7 @@ foreach ($articles as $article) {
 
     // Link ophalen
     $linkNode = $xpath->query(".//a[contains(@class, 'StoryCard_titleLink__El6wj')]", $article);
-    $link = $linkNode->length > 0 ? "https://walibibelgium.prezly.com/nl" . $linkNode->item(0)->getAttribute("href") : "#";
+    $link = $linkNode->length > 0 ? "https://walibibelgium.prezly.com" . $linkNode->item(0)->getAttribute("href") : "#";
 
     // Datum ophalen
     $dateNode = $xpath->query(".//time", $article);
